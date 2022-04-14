@@ -1,0 +1,224 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>大数据可视化通用素材</title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <link rel="stylesheet" href="css/comon0.css">
+    <script src="echarts.js"></script>
+</head>
+<body>
+<!--<div class="loading">-->
+<!--    <div class="loadbox"><img src="images/loading.gif"> 页面加载中...</div>-->
+<!--</div>-->
+<div class="head">
+    <h1><a href="https://gitee.com/iGaoWei/big-data-view">高炉智能变料与操作优化模块</a></h1>
+</div>
+<div class="mainbox">
+    <ul class="clearfix">
+        <li>
+            <div class="boxall" style="height:calc(50% - .25rem)">
+                <div class="tit01">变料预警趋势</div>
+                <div class="boxnav nav01" id="echart3"></div>
+                <div class="boxfoot"></div>
+            </div>
+
+
+            <div class="boxall" style="height:calc(50% - .25rem)">
+                <div class="tit01">操作参数历史变动曲线</div>
+                <div class="boxnav nav01" id="echart1"></div>
+                <div class="boxfoot"></div>
+            </div>
+
+
+            <div style="height:calc(50% - .25rem); margin-bottom: .25rem;">
+
+                <div class="boxall" style="height: 100%; width:calc(100% - .08rem); float: left;">
+                    <div class="tit01">雷达图</div>
+                    <div class="boxnav nav01" id="echart2"></div>
+                    <div class="boxfoot"></div>
+                </div>
+
+            </div>
+
+        </li>
+
+        <li>
+            <div style="height:calc(50% - .25rem); margin-bottom: .25rem;">
+                <div class="boxall" style="height: 100%; width:calc(50% - .08rem); float: left;">
+                    <div class="tit01">炉料参数历史变动曲线</div>
+                    <div class="boxnav nav01" id="echart11"></div>
+                    <div class="boxfoot"></div>
+                </div>
+                <div class="boxall" style="height: 100%; width:calc(50% - .08rem); float: right;">
+                    <div class="tit01">炉料参数箱型对比图</div>
+                    <div class="boxnav nav01" id="echart12"></div>
+                    <div class="boxfoot"></div>
+                </div>
+            </div>
+<!--        高炉操作优化信息表-->
+            <div class="boxall" style="height:calc(50% - .25rem)">
+                <div class="tit03">高炉操作优化信息表</div>
+                <div class="boxnav nav03">
+
+                    <div class="listhead listhead1">
+                        <span>操作参数名</span>
+                        <span>实时值</span>
+                        <span>新上限</span>
+                        <span>新下限</span>
+                        <span>旧上限</span>
+                        <span>旧下限</span>
+                        <span>敏感值</span>
+                    </div>
+                    <div class="listnav listnav1 scrollDiv">
+                        <ul>
+                            <li><span class="text-red">操作参数1</span> <span>2658</span> <span>2678</span>
+                                <span>2518</span> <span>2678</span> <span>2518</span><span>95%</span>
+                            </li>
+                            <li><span class="text-red">操作参数2</span> <span>2334</span> <span>2456</span>
+                                <span>2223</span> <span>2466</span> <span>2213</span><span>90%</span>
+                            </li>
+                            <li><span class="text-green">操作参数3</span><span>26.00</span> <span>31.06</span>
+                                <span>22.31</span> <span>31.61</span> <span>22.35</span><span>88%</span>
+                            </li>
+                            <li><span class="text-red">操作参数4</span> <span>5.00</span> <span>7.67</span>
+                                <span>4.19</span> <span>7.07</span> <span>4.93</span><span>92%</span>
+                            </li>
+                            <li>
+                                <span class="text-red">操作参数5</span>
+                                <span>  135  </span>
+                                <span>233</span>
+                                <span>99</span>
+                                <span>223</span>
+                                <span>109</span>
+                                <span>96%</span>
+                            </li>
+
+                        </ul>
+                    </div>
+
+
+                </div>
+                <div class="boxfoot"></div>
+            </div>
+        </li>
+        <li>
+            <div class="boxall" style="height:calc(50% - .25rem); padding: 0;">
+                <div class="tit04">炉料实时信息表</div>
+                <div class="boxnav nav04">
+
+                    <div class="listhead listhead2">
+                        <span>炉料参数名</span>
+                        <span>炉料参数数值</span>
+                        <span>采集时间</span>
+
+                    </div>
+
+                    <div class="listnav listnav2 scrollDiv">
+
+                        <ul class="smjl">
+                            <li>
+                                <span>炉料参数1</span>
+                                <span class="text-green">35.79</span>
+                                <span><span> <input type="hidden" name="countDown"
+                                                    value="2022/4/14 3:23:00"> <span></span></span></span>
+                            </li>
+                            <li>
+                                <span>炉料参数2</span>
+                                <span class="text-red">无数据</span>
+                                <span><span> <input type="hidden" name="countDown"
+                                                    value="2022/4/14 3:23:00"> <span></span></span></span>
+                            </li>
+                            <li>
+                                <span>炉料参数3</span>
+                                <span class="text-green">0.07</span>
+                                <span><span> <input type="hidden" name="countDown"
+                                                    value="2022/4/14 3:23:00"> <span></span></span></span>
+                            </li>
+                            <li>
+                                <span>炉料参数4</span>
+                                <span class="text-green">312.77</span>
+                                <span><span> <input type="hidden" name="countDown"
+                                                    value="2022/4/14 3:23:00"> <span></span></span></span>
+                            </li>
+                            <li>
+                                <span>炉料参数5</span>
+                                <span class="text-green">135.71</span>
+                                <span><span> <input type="hidden" name="countDown"
+                                                    value="2022/4/14 3:23:00"> <span></span></span></span>
+                            </li>
+                            <li>
+                                <span>炉料参数6</span>
+                                <span class="text-green">5.91</span>
+                                <span><span> <input type="hidden" name="countDown"
+                                                    value="2022/4/14 3:23:00"> <span></span></span></span>
+                            </li>
+                            <li>
+                                <span>炉料参数7</span>
+                                <span class="text-green">3.71</span>
+                                <span><span> <input type="hidden" name="countDown"
+                                                    value="2022/4/14 3:23:00"> <span></span></span></span>
+                            </li>
+                            <li>
+                                <span>炉料参数8</span>
+                                <span class="text-green">11.21</span>
+                                <span><span> <input type="hidden" name="countDown"
+                                                    value="2022/4/14 3:23:00"> <span></span></span></span>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="boxfoot"></div>
+            </div>
+
+
+
+            <div class="boxall" style="height:calc(50% - .25rem)">
+                <div class="tit01">操作参数箱型对比图</div>
+                <div class="boxnav nav01" id="echart13"></div>
+                <div class="boxfoot"></div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+<script type="text/javascript" src="js/echarts.min.js"></script>
+<script src="js/jquery.liMarquee.js"></script>
+<script language="JavaScript" src="js/js.js"></script>
+<script type="text/javascript" src="js/jquery.countup.min.js"></script>
+<script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
+<script type="text/javascript">
+    $('.counter').countUp();
+
+    $(function () {
+        $('.scrollDiv').liMarquee({
+            direction: 'up',//身上滚动
+            runshort: false,//内容不足时不滚动
+            scrollamount: 20//速度
+        });
+    });
+
+</script>
+<script src="js/countDown.js"></script>
+<script type="text/javascript">
+    $("input[name='countDown']").each(function () {
+        var time_end = this.value;
+        var con = $(this).next("span");
+        var _ = this.dataset;
+        countDown(con, {
+            time_end: time_end//开始时间
+        })
+            //提供3个事件分别为:启动,重启,停止
+            .on("countDownStarted countDownRestarted  countDownEnded ", function (arguments) {
+                console.info(arguments);
+            });
+    });
+
+</script>
+
+</body>
+
+</html>
