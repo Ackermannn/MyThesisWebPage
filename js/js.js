@@ -72,41 +72,79 @@ $(function () {
                     }
                 }
             }],
-            series: [{
-                name: '生产情况',
-                type: 'line',
-                smooth: true,
-                symbol: 'circle',
-                symbolSize: 5,
-                showSymbol: false,
-                lineStyle: {
-                    normal: {
-                        width: 2
-                    }
-                },
+            series: [
+                {
+                    markLine: {
+                        symbol: "none", //去掉箭头
+                        data: [
 
-                areaStyle: {
-                    normal: {
-                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                            offset: 0,
-                            color: 'rgba(98, 201, 141, 0.5)'
-                        }, {
-                            offset: 1,
-                            color: 'rgba(98, 201, 141, 0.1)'
-                        }], false),
-                        shadowColor: 'rgba(0, 0, 0, 0.1)',
-                        shadowBlur: 10
-                    }
-                },
-                itemStyle: {
-                    normal: {
-                        color: '#4cb9cf',
-                        borderColor: 'rgba(98, 201, 141,0.27)',
-                        borderWidth: 12
-                    }
-                },
-                data: [56, 34, 70, 54, 67, 40]
-            }]
+                            {
+                                yAxis: 28, // 标记线x轴的值
+                                lineStyle: {
+                                    color: 'red'
+                                },
+                            },
+
+
+                            {
+                                yAxis: 65, // 第二条标记线x轴的值
+                                lineStyle: {
+                                    color: 'red'
+                                },
+                            },
+                            {
+                                yAxis: 35, // 标记线x轴的值
+                                lineStyle: {
+                                    color: 'yellow'
+                                },
+                            },
+
+
+                            {
+                                yAxis: 70, // 第二条标记线x轴的值
+                                lineStyle: {
+                                    color: 'yellow'
+                                },
+                            },
+
+
+                        ],
+                    },
+
+                    name: '生产情况',
+                    type: 'line',
+                    smooth: true,
+                    symbol: 'circle',
+                    symbolSize: 5,
+                    showSymbol: false,
+                    lineStyle: {
+                        normal: {
+                            width: 2
+                        }
+                    },
+
+                    areaStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: 'rgba(98, 201, 141, 0.5)'
+                            }, {
+                                offset: 1,
+                                color: 'rgba(98, 201, 141, 0.1)'
+                            }], false),
+                            shadowColor: 'rgba(0, 0, 0, 0.1)',
+                            shadowBlur: 10
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: '#4cb9cf',
+                            borderColor: 'rgba(98, 201, 141,0.27)',
+                            borderWidth: 12
+                        }
+                    },
+                    data: [56, 34, 70, 54, 67, 40]
+                }]
         };
 
         // 使用刚指定的配置项和数据显示图表。
